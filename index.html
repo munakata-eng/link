@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link in Bio</title>
+    <meta name="description" content="My social media and portfolio links">
+
+    <!-- OGP Tags -->
+    <meta property="og:title" content="Link in Bio">
+    <meta property="og:description" content="My social media and portfolio links">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourdomain.com">
+    <meta property="og:image" content="https://yourdomain.com/ogp-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <style>
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-color: #e0e0e0;
+            --accent-color: #bb86fc;
+            --hover-color: #9d4edd;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .profile {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .profile-pic {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+            border: 3px solid var(--accent-color);
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            color: white;
+        }
+
+        .bio {
+            color: #a0a0a0;
+            margin-bottom: 2rem;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            width: 100%;
+        }
+
+        .link-card {
+            background: var(--card-bg);
+            padding: 1.2rem;
+            border-radius: 12px;
+            text-decoration: none;
+            color: var(--text-color);
+            display: flex;
+            align-items: center;
+            transition: var(--transition);
+            border: 1px solid #333;
+        }
+
+        .link-card:hover {
+            transform: translateY(-2px);
+            border-color: var(--accent-color);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .link-icon {
+            width: 32px;
+            height: 32px;
+            margin-right: 1rem;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(187, 134, 252, 0.1);
+            color: var(--accent-color);
+            font-size: 1.2rem;
+        }
+
+        .link-text {
+            flex: 1;
+        }
+
+        .link-text h3 {
+            font-size: 1rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .link-text p {
+            font-size: 0.85rem;
+            color: #a0a0a0;
+            margin: 0;
+        }
+
+        footer {
+            margin-top: 3rem;
+            text-align: center;
+            color: #666;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 1.5rem 1rem;
+            }
+
+            .profile-pic {
+                width: 100px;
+                height: 100px;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="profile">
+            <img src="icon.jpeg" alt="Profile" class="profile-pic">
+            <h1>Your Name</h1>
+            <p class="bio">Web Developer | Designer | Content Creator</p>
+        </div>
+
+        <div class="links">
+            <a href="#" class="link-card" target="_blank" rel="noopener noreferrer">
+                <div class="link-icon">🐦</div>
+                <div class="link-text">
+                    <h3>Twitter / X</h3>
+                    <p>@yourusername</p>
+                </div>
+            </a>
+
+            <a href="#" class="link-card" target="_blank" rel="noopener noreferrer">
+                <div class="link-icon">📸</div>
+                <div class="link-text">
+                    <h3>Instagram</h3>
+                    <p>@yourusername</p>
+                </div>
+            </a>
+
+            <a href="#" class="link-card" target="_blank" rel="noopener noreferrer">
+                <div class="link-icon">💼</div>
+                <div class="link-text">
+                    <h3>Portfolio</h3>
+                    <p>Check out my work</p>
+                </div>
+            </a>
+
+            <a href="#" class="link-card" target="_blank" rel="noopener noreferrer">
+                <div class="link-icon">📧</div>
+                <div class="link-text">
+                    <h3>Email</h3>
+                    <p>your.email@example.com</p>
+                </div>
+            </a>
+
+            <a href="#" class="link-card" target="_blank" rel="noopener noreferrer">
+                <div class="link-icon">💻</div>
+                <div class="link-text">
+                    <h3>GitHub</h3>
+                    <p>github.com/yourusername</p>
+                </div>
+            </a>
+        </div>
+
+        <footer>
+            <p>© 2025 Your Name. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Add smooth scrolling to all links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add animation on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.link-card');
+            cards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, 100 * index);
+            });
+        });
+    </script>
+</body>
+</html>
